@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Case Studies — A&amp;A Moore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="Work">
+
+<!-- ============ NAV ============ -->
+<nav class="nav" data-mode="hero-dark">
+  <a class="nav-logo" href="index.html">A<span class="amp">&amp;</span>A&nbsp;Moore</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="work.html" class="active">Work</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get in Touch</a>
+  <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="work.html">Work</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="nav-cta">Get in Touch →</a>
+</div>
+
+<!-- ============ MINI HERO ============ -->
+<header class="hero hero-mini" style="background: var(--black); min-height: 60vh;">
+  <div class="hero-img" style="opacity: 0.3;">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2000&q=80&auto=format&fit=crop" alt="" />
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">Case studies</span>
+    <h1 class="h-display" style="margin-top: 24px;">The work, and what<br/>came out of it.</h1>
+    <p class="lead" style="margin-top: 28px;">Six recent engagements, each picked because the outcome was measurable and the journey was instructive. Names are anonymized where the client preferred privacy.</p>
+  </div>
+</header>
+
+<!-- ============ FILTER ROW (decorative) ============ -->
+<section style="padding: 36px var(--pad-x); background: var(--white); border-bottom: 1px solid var(--line);">
+  <div style="max-width: var(--max-w); margin: 0 auto; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <button class="btn-filter active" data-filter="all">All work</button>
+      <button class="btn-filter" data-filter="brand">Brand</button>
+      <button class="btn-filter" data-filter="strategy">Strategy</button>
+      <button class="btn-filter" data-filter="growth">Growth</button>
+      <button class="btn-filter" data-filter="ai">AI</button>
+    </div>
+    <div style="font-size: 13px; color: var(--text-muted); letter-spacing: 0.02em;">
+      Showing <span id="count">6</span> of 6
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK GRID ============ -->
+<section class="work-grid-section" data-screen-label="Work grid">
+  <div class="work-grid-inner">
+    <div class="work-grid" id="work-grid">
+
+      <article class="work-card reveal" data-cat="strategy" onclick="openCS('halsted')">
+        <div class="work-card-img">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1400&q=80&auto=format&fit=crop" alt="" />
+        </div>
+        <div class="work-eyebrow"><span class="dot"></span> Strategy · Halsted Mfg.</div>
+        <h3>From a stalled second year to a clear three-year plan.</h3>
+        <div class="outcome">
+          <span class="outcome-stat">+62%</span>
+          <span class="outcome-label">Year-over-year revenue<br/>after replanning</span>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-cat="brand" onclick="openCS('northbrook')">
+        <div class="work-card-img">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80&auto=format&fit=crop" alt="" />
+        </div>
+        <div class="work-eyebrow"><span class="dot"></span> Brand · Northbrook &amp; Co.</div>
+        <h3>Rebuilding a family business for a generational handoff.</h3>
+        <div class="outcome">
+          <span class="outcome-stat">3.4×</span>
+          <span class="outcome-label">Inbound qualified<br/>leads, six months in</span>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-cat="ai" onclick="openCS('lakefront')">
+        <div class="work-card-img">
+          <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1400&q=80&auto=format&fit=crop" alt="" />
+        </div>
+        <div class="work-eyebrow"><span class="dot"></span> AI · Lakefront Dental</div>
+        <h3>An AI receptionist that finally answers every call.</h3>
+        <div class="outcome">
+          <span class="outcome-stat">94%</span>
+          <span class="outcome-label">Inbound calls handled<br/>without a human</span>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-cat="growth" onclick="openCS('atlas')">
+        <div class="work-card-img">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1400&q=80&auto=format&fit=crop" alt="" />
+        </div>
+        <div class="work-eyebrow"><span class="dot"></span> Growth · Atlas Logistics</div>
+        <h3>Tightening a leaking pipeline without firing anyone.</h3>
+        <div class="outcome">
+          <span class="outcome-stat">−41%</span>
+          <span class="outcome-label">Sales cycle length<br/>across two quarters</span>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-cat="brand" onclick="openCS('greycoast')">
+        <div class="work-card-img">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80&auto=format&fit=crop" alt="" />
+        </div>
+        <div class="work-eyebrow"><span class="dot"></span> Brand · Greycoast Advisors</div>
+        <h3>A new identity for a practice scaling past the founder.</h3>
+        <div class="outcome">
+          <span class="outcome-stat">+28%</span>
+          <span class="outcome-label">Average engagement<br/>value, post-rebrand</span>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-cat="strategy" onclick="openCS('foxworth')">
+        <div class="work-card-img">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80&auto=format&fit=crop" alt="" />
+        </div>
+        <div class="work-eyebrow"><span class="dot"></span> Strategy · Foxworth Health</div>
+        <h3>An investor deck that closed in the second meeting.</h3>
+        <div class="outcome">
+          <span class="outcome-stat">$4.2M</span>
+          <span class="outcome-label">Seed round raised<br/>at target valuation</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED CASE STUDY ============ -->
+<section class="cs-detail" data-screen-label="Featured case study">
+  <div style="background: var(--cream-soft); padding: 32px var(--pad-x); text-align: center;">
+    <span class="eyebrow">Featured engagement · 2025</span>
+  </div>
+  <div style="aspect-ratio: 21/9; overflow: hidden; background: var(--black);">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2400&q=80&auto=format&fit=crop" alt="" style="width:100%; height:100%; object-fit: cover;" />
+  </div>
+  <div class="cs-meta-grid">
+    <div class="cs-meta">
+      <span class="eyebrow">Client</span>
+      <p>Halsted Mfg.</p>
+    </div>
+    <div class="cs-meta">
+      <span class="eyebrow">Sector</span>
+      <p>Industrial / B2B</p>
+    </div>
+    <div class="cs-meta">
+      <span class="eyebrow">Services</span>
+      <p>Business Plan · Sales Strategy · Brand</p>
+    </div>
+    <div class="cs-meta">
+      <span class="eyebrow">Timeline</span>
+      <p>14 weeks · 2024–25</p>
+    </div>
+  </div>
+  <div class="cs-body">
+    <p class="lead">A second-generation Chicago manufacturer had hit a wall: orders were steady, margins were not, and the leadership team couldn't agree on whether the problem was sales, operations, or simply a market that had moved on without them.</p>
+    <p>We spent the first four weeks doing what most engagements skip: listening. To shop-floor supervisors, to the controller, to the two largest customers, and to the founder who'd been running the place since 1998. The diagnosis that emerged wasn't the one anyone expected — the sales process was fine, but the company was quoting work it shouldn't have been bidding on at all.</p>
+    <blockquote class="cs-quote">"Half the work we won was work that made us money on paper and lost us money in practice. Once we stopped chasing it, the rest of the business got easier overnight."</blockquote>
+    <p>From there the work split into three streams: a rebuilt pricing and qualification model, a three-year operating plan with the leadership team co-authoring it section by section, and a brand refresh tied to the new positioning. Twelve months later, revenue is up 62%, the team is smaller, and the founder has Saturdays back.</p>
+    <div style="margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="contact.html" class="btn btn-dark">Start a Project <span class="arrow">→</span></a>
+      <a href="services.html" class="btn btn-outline-dark">See Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="cta-band-inner reveal">
+    <span class="eyebrow on-dark" style="display:inline-block; margin-bottom: 28px;">Your engagement, next</span>
+    <h2 class="h-display">The next case study<br/>could be yours.</h2>
+    <p>Bring us the problem. We'll bring the structured approach, the measurable outcome, and the candor most engagements quietly avoid.</p>
+    <a href="contact.html" class="btn btn-light">Schedule a Consultation <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">A<span class="amp">&amp;</span>A&nbsp;Moore</div>
+        <p class="footer-tag">A Chicago-based consultancy helping ambitious businesses move from complexity to clarity — and from clarity to real, measurable results.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Case Studies</a></li>
+          <li><a href="about.html">About Amber</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@aamoore.co">hello@aamoore.co</a></li>
+          <li><a href="tel:+13125550199">+1 (312) 555-0199</a></li>
+          <li>Chicago, IL</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Office hours</h5>
+        <ul>
+          <li>Mon – Fri</li>
+          <li>9:00 – 6:00 CST</li>
+          <li>By appointment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 A&amp;A Moore Consulting · All rights reserved</div>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M9 17H6.5V10H9V17M7.7 8.7C6.9 8.7 6.3 8.1 6.3 7.3S6.9 6 7.7 6 9.1 6.6 9.1 7.3 8.5 8.7 7.7 8.7M18 17H15.5V13.4C15.5 12.5 15 12 14.3 12C13.6 12 13 12.5 13 13.4V17H10.5V10H13V11C13.4 10.3 14.4 9.8 15.3 9.8C17 9.8 18 10.9 18 12.7V17Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X / Twitter"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22L14.7 11.2L23.3 21H16.6L11.3 14.1L5.3 21H2.2L9.9 12.2L1.7 3H8.6L13.4 9.3L18.9 3M17.8 19.2H19.5L7.3 4.7H5.5L17.8 19.2Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .btn-filter {
+    padding: 11px 22px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(0, 0, 0, 0.35);
+    background: transparent;
+    color: var(--black);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-filter:hover { transform: translateY(-1px); }
+  .btn-filter:active { transform: translateY(0); }
+  .btn-filter.active { background: #000; color: #fff; border-color: #000; }
+</style>
+
+<script src="image-slot.js"></script>
+<script src="site.js"></script>
+<script>
+  // Simple filter behavior
+  const buttons = document.querySelectorAll('.btn-filter');
+  const cards = document.querySelectorAll('#work-grid .work-card');
+  const countEl = document.getElementById('count');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      let shown = 0;
+      cards.forEach(c => {
+        const match = (f === 'all' || c.dataset.cat === f);
+        c.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      countEl.textContent = shown;
+    });
+  });
+  // Clicking a card scrolls to featured case study
+  function openCS(slug){
+    const target = document.querySelector('.cs-detail');
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.scrollY - 60;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

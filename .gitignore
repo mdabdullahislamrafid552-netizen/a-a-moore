@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env
+.env*.local
+*.log
+.DS_Store
+Thumbs.db
+# Large files
+*.zip
+*.tar.gz
+*.mp4
+*.mov

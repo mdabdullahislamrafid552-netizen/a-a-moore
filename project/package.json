@@ -1,0 +1,12 @@
+{
+  "name": "a-a-moore-website",
+  "version": "1.0.0",
+  "description": "A&A Moore Consulting Website",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
