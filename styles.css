@@ -1631,3 +1631,12 @@ section { position: relative; }
 
 /* placeholder marker shown on image slots */
 image-slot { border-radius: inherit; }
+
+
+/* Logo Image Overrides */
+.nav-logo-img, .footer-logo-img {
+  max-height: 65px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
