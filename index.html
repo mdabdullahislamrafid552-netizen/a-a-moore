@@ -14,10 +14,14 @@
   .hero-home {
     position: relative;
     min-height: 100vh;
-    height: 100vh;
     width: 100%;
     overflow: hidden;
     background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 12%;
   }
   .hero-home-bg {
     position: absolute;
@@ -25,9 +29,9 @@
     z-index: 0;
     animation: hero-zoom 12s ease-out forwards;
     transform-origin: center center;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 80%), url('./images/hero-bg.jpg');
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.95) 90%), url('./images/hero-bg.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center 15%;
     background-repeat: no-repeat;
   }
   @keyframes hero-zoom {
@@ -37,13 +41,11 @@
   .hero-home-content {
     position: relative;
     z-index: 10;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 140px 24px 80px;
+    padding: 0 24px;
     opacity: 0;
     transform: translateY(28px);
     animation: hero-fade 1.1s ease 0.3s forwards;
