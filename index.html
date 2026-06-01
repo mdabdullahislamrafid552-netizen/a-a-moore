@@ -13,9 +13,7 @@
   /* ===== Home hero — cinematic full-bleed ===== */
   .hero-home {
     min-height: 100vh !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: block !important;
     padding: 0 !important;
     width: 100%;
     overflow: hidden;
@@ -27,10 +25,10 @@
     inset: 0;
     z-index: 0;
     animation: hero-zoom 12s ease-out forwards;
-    transform-origin: center center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('/images/hero-bg.jpg') !important;
+    transform-origin: center top;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.95) 100%), url('/images/hero-bg.jpg') !important;
     background-size: cover !important;
-    background-position: center center !important;
+    background-position: center top !important;
     background-repeat: no-repeat !important;
   }
   @keyframes hero-zoom {
@@ -38,10 +36,11 @@
     to   { transform: scale(1.0);  }
   }
   .hero-home-content {
-    margin: auto !important;
-    padding: 0 20px !important;
+    padding-top: 55vh !important;
+    padding-bottom: 5vh !important;
+    margin: 0 auto !important;
     position: relative !important;
-    bottom: auto !important;
+    top: 0 !important;
     transform: none !important;
     width: 100% !important;
     text-align: center !important;
