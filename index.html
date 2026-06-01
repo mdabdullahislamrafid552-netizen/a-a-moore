@@ -24,30 +24,14 @@
     z-index: 0;
     animation: hero-zoom 12s ease-out forwards;
     transform-origin: center center;
-  }
-  .hero-home-bg image-slot,
-  .hero-home-bg > img { display: block; width: 100%; height: 100%; }
-  .hero-home-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    filter: brightness(0.72);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.9)), url('./images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   @keyframes hero-zoom {
     from { transform: scale(1.08); }
     to   { transform: scale(1.0);  }
-  }
-  .hero-home-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(180deg,
-      rgba(0,0,0,0.18) 0%,
-      rgba(0,0,0,0.08) 35%,
-      rgba(0,0,0,0.55) 62%,
-      rgba(0,0,0,0.88) 100%);
-    pointer-events: none;
   }
   .hero-home-content {
     position: relative;
@@ -132,12 +116,7 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero-home" data-screen-label="Hero">
-  <div class="hero-home-bg">
-    <image-slot id="hero-amber" shape="rect" placeholder="Amber portrait — full-bleed, cinematic. 16:9 minimum.">
-      <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=2000&q=80&auto=format&fit=crop" alt="" />
-    </image-slot>
-  </div>
-  <div class="hero-home-overlay"></div>
+  <div class="hero-home-bg"></div>
   <div class="hero-home-content">
     <div class="hero-home-inner">
       <span class="hero-home-eyebrow">A&amp;A Moore</span>
