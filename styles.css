@@ -521,8 +521,8 @@ section { position: relative; }
    ============================================================ */
 .logos-strip {
   padding: 36px var(--pad-x);
-  background: var(--white);
-  border-bottom: 1px solid var(--line);
+  background: var(--black);
+  border-bottom: 1px solid var(--line-dark);
   overflow: hidden;
 }
 .logos-track {
