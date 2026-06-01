@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services Menu — A&amp;A Moore</title>
+<meta name="description" content="A&A Moore services menu and pricing. Ultra-premium business consulting for ambitious leaders." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Manrope:wght@200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --black: #050505;
+    --black-soft: #0C0C0C;
+    --cream: #F5F1EA;
+    --cream-soft: #EFECE6;
+    --text-muted: #8E8A82;
+    --accent: #D4AF37; /* Premium Gold */
+    --accent-soft: #C5A028;
+    --border: rgba(245, 241, 234, 0.08);
+    --border-bright: rgba(245, 241, 234, 0.15);
+    
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "Manrope", sans-serif;
+    --dm-sans: "DM Sans", sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background-color: var(--black);
+    color: var(--cream);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+  }
+
+  /* Layout Container */
+  .container {
+    width: 100%;
+    max-width: 680px; /* Focused mobile-first width */
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header Branding */
+  header.nav-header {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--dm-sans);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+  }
+  .logo span { opacity: 0.8; font-weight: 300; }
+
+  .back-link {
+    font-family: var(--dm-sans);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover {
+    color: var(--cream);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 0 40px;
+    text-align: center;
+  }
+  
+  .eyebrow {
+    font-family: var(--dm-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 7vw, 48px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    color: var(--cream);
+  }
+
+  .lead {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* Services Grid/Menu */
+  .menu-section {
+    padding: 20px 0 60px;
+  }
+
+  .menu-category-title {
+    font-family: var(--dm-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-bright);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+
+  .menu-item {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    gap: 16px;
+  }
+
+  .menu-item-num {
+    font-family: var(--serif);
+    font-size: 12px;
+    font-style: italic;
+    color: var(--accent);
+    margin-right: 12px;
+  }
+
+  .menu-item-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--cream);
+    flex-grow: 1;
+  }
+
+  .menu-item-type {
+    font-family: var(--dm-sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+    border: 1px solid var(--border-bright);
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  .menu-item-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .menu-item-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    list-style: none;
+  }
+
+  .menu-item-details li {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  .menu-item-details li::before {
+    content: "—";
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 600;
+  }
+
+  /* Client list */
+  .clients-section {
+    padding: 60px 0;
+    border-top: 1px solid var(--border-bright);
+    border-bottom: 1px solid var(--border-bright);
+    text-align: center;
+  }
+
+  .clients-title {
+    font-family: var(--dm-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 32px;
+  }
+
+  .client-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .client-name {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--cream);
+    opacity: 0.95;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  
+  .client-name:hover {
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  .client-divider {
+    width: 20px;
+    height: 1px;
+    background-color: var(--border-bright);
+    margin: 4px auto;
+  }
+
+  /* CTA / Contact Section */
+  .cta-section {
+    padding: 80px 0 40px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .cta-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-weight: 300;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: var(--dm-sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 24px;
+  }
+
+  .btn:hover {
+    background-color: var(--accent);
+    color: var(--black);
+    transform: translateY(-1px);
+  }
+
+  .contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .contact-link {
+    font-family: var(--dm-sans);
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+  }
+
+  .contact-link:hover {
+    color: var(--cream);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 32px;
+    }
+    .client-name {
+      font-size: 18px;
+    }
+    .menu-item-title {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <a href="index.html" class="logo">A<span>&amp;</span>A Moore</a>
+    <a href="index.html" class="back-link">Home</a>
+  </header>
+
+  <!-- Hero introduction -->
+  <section class="hero">
+    <span class="eyebrow">Services Menu</span>
+    <h1>Premium consulting.<br/>Measurable results.</h1>
+    <p class="lead">Seventeen years of organizational and business development, structured for clarity and impact. Scan, review, and let's discuss.</p>
+  </section>
+
+  <!-- Services Menu -->
+  <section class="menu-section">
+    <div class="menu-category-title">Core Engagements</div>
+    
+    <div class="client-list">
+      <!-- 01 Business Plans -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">01</span>Business Plans</h2>
+          <span class="menu-item-type">Fixed Project</span>
+        </div>
+        <p class="menu-item-desc">Investor-ready plans grounded in market, model and a defensible path to profitability.</p>
+        <ul class="menu-item-details">
+          <li>Unit Economics</li>
+          <li>Financial Models</li>
+          <li>KPI Frameworks</li>
+        </ul>
+      </div>
+
+      <!-- 02 Business Filings -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">02</span>Business Filings</h2>
+          <span class="menu-item-type">Foundations</span>
+        </div>
+        <p class="menu-item-desc">Entity formation, registrations and compliance handled cleanly from day one.</p>
+        <ul class="menu-item-details">
+          <li>LLC / C-Corp Formation</li>
+          <li>Operating Agreements</li>
+          <li>Compliance Setup</li>
+        </ul>
+      </div>
+
+      <!-- 03 Brand Packaging -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">03</span>Brand Packaging</h2>
+          <span class="menu-item-type">Creative</span>
+        </div>
+        <p class="menu-item-desc">Naming, identity systems and brand guidelines that scale with the business.</p>
+        <ul class="menu-item-details">
+          <li>Identity Systems</li>
+          <li>Brand Messaging</li>
+          <li>Logo Suites</li>
+        </ul>
+      </div>
+
+      <!-- 04 Pitch Decks & Presentations -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">04</span>Pitch Decks &amp; Presentations</h2>
+          <span class="menu-item-type">Communication</span>
+        </div>
+        <p class="menu-item-desc">Narrative-led decks that win meetings, raises and the rooms that matter.</p>
+        <ul class="menu-item-details">
+          <li>Investor Raise Decks</li>
+          <li>Sales Pitch Assets</li>
+          <li>Board Presentations</li>
+        </ul>
+      </div>
+
+      <!-- 05 Marketing & Social -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">05</span>Marketing &amp; Social</h2>
+          <span class="menu-item-type">Growth</span>
+        </div>
+        <p class="menu-item-desc">Strategy, content and channel mix engineered against the right conversion economics.</p>
+        <ul class="menu-item-details">
+          <li>Channel Strategy</li>
+          <li>Content Systems</li>
+          <li>Conversion Optimization</li>
+        </ul>
+      </div>
+
+      <!-- 06 Websites & Development -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">06</span>Websites &amp; Development</h2>
+          <span class="menu-item-type">Product</span>
+        </div>
+        <p class="menu-item-desc">Fast, modern sites and product surfaces that convert as well as they look.</p>
+        <ul class="menu-item-details">
+          <li>Marketing Sites</li>
+          <li>Lead Capture pages</li>
+          <li>CRO Instrumentation</li>
+        </ul>
+      </div>
+
+      <!-- 07 Sales Strategy & Metrics -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">07</span>Sales Strategy &amp; Metrics</h2>
+          <span class="menu-item-type">Revenue</span>
+        </div>
+        <p class="menu-item-desc">Pipeline design, sales motion and the KPI scaffolding leaders actually run on.</p>
+        <ul class="menu-item-details">
+          <li>Qualification Frameworks</li>
+          <li>Sales Playbooks</li>
+          <li>Revenue Dashboards</li>
+        </ul>
+      </div>
+
+      <!-- 08 AI Services -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">08</span>AI Services</h2>
+          <span class="menu-item-type">Automation</span>
+        </div>
+        <p class="menu-item-desc">Chatbots, AI receptionists and automation built for how your business actually runs.</p>
+        <ul class="menu-item-details">
+          <li>AI Receptionists</li>
+          <li>Web Chat Assistants</li>
+          <li>Workflow Automation</li>
+        </ul>
+      </div>
+
+      <!-- 09 Sales / Growth Support -->
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <h2 class="menu-item-title"><span class="menu-item-num">09</span>Sales / Growth Support</h2>
+          <span class="menu-item-type">Growth Retainer</span>
+        </div>
+        <p class="menu-item-desc">You create the product and/or service and we do the heavy lifting, with a proven track record to increase revenue and hit profit goals.</p>
+        <ul class="menu-item-details">
+          <li>End-to-End Sales Execution</li>
+          <li>Revenue &amp; Pipeline Generation</li>
+          <li>Profit Goal Optimization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client list -->
+  <section class="clients-section">
+    <div class="clients-title">Selected Client Partnerships</div>
+    <div class="client-list">
+      <div class="client-name">Autism SHERO RUN 5k/10k</div>
+      <div class="client-divider"></div>
+      <div class="client-name">Vivere Construction</div>
+      <div class="client-divider"></div>
+      <div class="client-name">The Afrobeatz Xperience</div>
+      <div class="client-divider"></div>
+      <div class="client-name">Pace Run For A Cause</div>
+      <div class="client-divider"></div>
+      <div class="client-name">Shining Hammers Football Club (SHFC)</div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="cta-section">
+    <h2 class="cta-title">Let's build together.</h2>
+    <p class="cta-desc">One direct conversation is enough to see if we're aligned. There is no cost to find out.</p>
+    <a href="contact.html" class="btn">Book a Consultation</a>
+    <div class="contact-details">
+      <a href="mailto:hello@aamoore.co" class="contact-link">hello@aamoore.co</a>
+      <a href="tel:+13125550199" class="contact-link">+1 (312) 555-0199</a>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
