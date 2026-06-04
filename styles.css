@@ -112,7 +112,6 @@ section { position: relative; }
   padding: 28px 48px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 24px;
   background: transparent;
   border-bottom: 1px solid transparent;
@@ -144,10 +143,6 @@ section { position: relative; }
 
 /* LOGO — centered absolutely, DM Sans, uppercase, tracked */
 .nav-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   font-weight: 500;
   font-size: 22px;
@@ -155,6 +150,8 @@ section { position: relative; }
   text-transform: uppercase;
   color: currentColor;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 .nav-logo .amp { font-style: normal; opacity: 1; margin: 0; }
 
@@ -167,6 +164,8 @@ section { position: relative; }
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.01em;
+  margin-left: 24px; /* Space between logo and links */
+  margin-right: auto; /* Pushes the CTA to the far right */
 }
 .nav-links a {
   position: relative;
@@ -1639,4 +1638,5 @@ image-slot { border-radius: inherit; }
   width: auto;
   object-fit: contain;
   display: block;
+  mix-blend-mode: screen; /* Makes black background transparent */
 }
